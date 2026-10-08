@@ -1,0 +1,24 @@
+{
+  "name": "bh-backend",
+  "version": "1.0.0",
+  "description": "Benjamini-Hochberg 多重检验调整与拒绝集合核验后端（API + CLI）",
+  "type": "module",
+  "bin": {
+    "bh": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --experimental-sqlite --test dist-test/tests/*.test.js",
+    "start": "node --experimental-sqlite dist/server.js",
+    "demo": "tsc -p tsconfig.test.json && node --experimental-sqlite dist-test/demos/run-demo.js",
+    "pretest": "tsc -p tsconfig.test.json"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "typescript": "~5.9.2"
+  }
+}
